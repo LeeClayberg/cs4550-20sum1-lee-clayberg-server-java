@@ -14,31 +14,51 @@
 </head>
 <body>
     <div class="container">
-        <h1>Register</h1>
+        <div>
+            <h1>Sign Up</h1>
 
-        <label for="username">Username</label>
-        <input  id="username"
-                class="form-control"
-                type="text"
-                placeholder="joe123"
-                title="Use this username to login"/>
-        Password
-        <input
-                class="form-control"
-                type="password"/>
-        Verify Password
-        <input
-                class="form-control"
-                type="password"/>
-        <a href="../profile/profile.template.client.html"
-            class="btn btn-primary">
-            Register
-        </a>
-        <a class="pull-right btn btn-primary"
-           href="../login/login.template.client.html">
-            Login
-        </a>
+            <div class="form-group row">
+                <label for="usernameFld" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                    <input  id="usernameFld"
+                            class="form-control wbdv-field wbdv-username"
+                            type="text"
+                            placeholder="Alice"
+                            title="Use this username to login"/>
+                </div>
+            </div>
 
+            <div class="form-group row">
+                <label for="passwordFld" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input  id="passwordFld"
+                            class="form-control wbdv-field wbdv-password"
+                            type="text"
+                            placeholder="123qwe#$%"
+                            title="Use this password to login"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="verifyPasswordFld" class="col-sm-2 col-form-label">Verify Password</label>
+                <div class="col-sm-10">
+                    <input  id="verifyPasswordFld"
+                            class="form-control wbdv-field wbdv-password"
+                            type="text"
+                            placeholder="123qwe#$%"
+                            title="Use this to verify password"/>
+                </div>
+            </div>
+
+            <a href="../profile/profile.template.client.html"
+                class="btn btn-primary">
+                Register
+            </a>
+            <a class="pull-right btn btn-primary"
+               href="../login/login.template.client.html">
+                Login
+            </a>
+        </div>
     </div>
 </body>
 </html>
