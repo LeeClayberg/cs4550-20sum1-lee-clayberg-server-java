@@ -39,67 +39,36 @@
                 </div>
             </div>
 
-        Date of birth
-        <input type="date" value="2020-05-04">
-        <br/>
+            <div class="form-group row">
+                <label for="emailFld" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input  id="emailFld"
+                            class="form-control wbdv-field wbdv-email"
+                            type="email"
+                            placeholder="alice@wonderland.com"
+                            title="Email Address"/>
+                </div>
+            </div>
 
-        Favorite movie
-        <select>
-            <option value="AVATAR2">Avatar - 2nd highest grossing movie</option>
-            <option selected value="T2">Terminator 2</option>
-            <option value="ALIENS2">Aliens 2</option>
-            <option value="TITANIC">Titanic</option>
-        </select>
-        <br/>
+            <div class="form-group row">
+                <label for="roleFld" class="col-sm-2 col-form-label">Role</label>
+                <div class="col-sm-10">
+                    <select id="roleFld" class="form-control">
+                        <option selectedvalue="FACULTY">Faculty</option>
+                        <option value="STUDENT">Student</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                </div>
+            </div>
 
-        Marital Status
-        <label>
-            <input type="radio" name="MSTATUS"/>Married
-        </label>
-        <label>
-            <input type="radio" name="MSTATUS"/>Single
-        </label>
-        <input type="radio" name="MSTATUS"/>Divorced
+            Date of birth
+            <input type="date" value="2020-05-04">
 
-        <br/>
-
-        Favorite color
-        <label>
-            <input type="radio" name="FCOLOR"/>Red
-            <input type="radio" name="FCOLOR"/>Green
-        </label>
-        <label>
-            <input type="radio" name="FCOLOR"/>Yellow
-        </label>
-        <label>
-            <input type="radio" name="FCOLOR"/>Blue
-        </label>
-
-        <br/>
-
-
-        Favorite movie genres
-        <label>
-            <input type="checkbox" value="HORROR" name="FGENRE"/>Horror
-            <input type="checkbox" value="COMEDY" name="FGENRE"/>Comedy
-        </label>
-        <label>
-            <input type="checkbox" value="DRAMA" name="FGENRE"/>Drama
-        </label>
-        <label>
-            <input type="checkbox" value="SCIFI" name="FGENRE"/>SciFi
-        </label>
-
-        <br/>
+            <a href="/index.html">
+                Logout
+            </a>
 
         </div>
-
-
-        <a href="/index.html">
-            Logout
-        </a>
-
-
     </div>
 </body>
 </html>
