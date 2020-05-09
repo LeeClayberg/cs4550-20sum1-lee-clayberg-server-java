@@ -53,7 +53,7 @@
             <div class="form-group row">
                 <label for="roleFld" class="col-sm-2 col-form-label">Role</label>
                 <div class="col-sm-10">
-                    <select id="roleFld" class="form-control">
+                    <select id="roleFld" class="form-control wbdv-field wbdv-role">
                         <option selectedvalue="FACULTY">Faculty</option>
                         <option value="STUDENT">Student</option>
                         <option value="ADMIN">Admin</option>
@@ -61,8 +61,16 @@
                 </div>
             </div>
 
-            Date of birth
-            <input type="date" value="2020-05-04">
+            <div class="form-group row">
+                <label for="dateofbirthFld" class="col-sm-2 col-form-label">Date of Birth</label>
+                <div class="col-sm-10">
+                    <input  id="dateofbirthFld"
+                            class="form-control wbdv-field wbdv-dob"
+                            type="date"
+                            placeholder="mm/dd/yyyy"
+                            title="Date of Birth"/>
+                </div>
+            </div>
 
             <a href="/index.html">
                 Logout
