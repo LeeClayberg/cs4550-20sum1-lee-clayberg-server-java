@@ -5,18 +5,15 @@ body {
 
 thead {
     background: #dddddd;
-    height: 100px;
-    border-bottom: 3px solid #cecece;
 }
 
 tbody {
     background: white;
-    height: 60px;
     border-right: 3px solid #cecece;
     border-left: 3px solid #cecece;
 }
 
-table, th, td {
+table, tr {
     border-bottom: 3px solid #cecece;
 }
 
@@ -26,11 +23,13 @@ table, th, td {
 }
 
 .large-cell {
-    width: 50%
+    width: 50%;
+    height: 4rem;
 }
 
 .small-cell {
-    width: 16.66%
+    width: 16.66%;
+    height: 4rem;
 }
 
 .icon-spacing-15 {
@@ -47,18 +46,69 @@ table, th, td {
 }
 
 .doc-icon {
-    padding-left: 10px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
     color: #007bff;
 }
 
 .x-button-spacing {
-    padding-right: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-right: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
 }
 
 .row-light-text {
     font-size: 0.9rem;
     color: #999999;
+}
+
+.hamburger {
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.course-manager-style {
+    display: block;
+    color: white;
+    font-size: 1.4rem;
+    padding-right: 1rem;
+}
+
+.search-area {
+    width: 60%;
+}
+
+.search-bar {
+    display: block;
+    width: 100%;
+    padding: .1rem 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #EAEBEB;
+    background-color: #649BF3;
+    background-clip: padding-box;
+    border: 0px solid white;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+::placeholder {
+    color: #EAEBEB;
+}
+
+.row {
+    width: 100%;
+}
+
+.add-button-area {
+    padding-left: 1rem;
+}
+
+.add-btn {
+    background-color: red;
+    border-radius: 1.5rem;
+}
+
+.drop-down-arrow {
+    padding-left: 1rem;
 }

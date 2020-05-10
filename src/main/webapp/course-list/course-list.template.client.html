@@ -18,18 +18,21 @@
 <body>
     <div class="container">
         <nav class="navbar fixed-top navbar-dark bg-primary">
-            <a class="navbar-brand">
-                <i class="fa fa-bars mx-2"></i>
-                Course Manager
-            </a>
-            <div class="form-inline">
-                <div class="form-group">
-                    <input  id="usernameFld"
-                            class="form-control wbdv-field wbdv-username"
-                            type="text"
-                            placeholder="Alice"
-                            title="Username"/>
-                    <button class="btn btn-danger">
+            <div class="form-inline row">
+                <div>
+                    <i class="fa fa-bars hamburger"></i>
+                </div>
+                <div class="course-manager-style">
+                    Course Manager
+                </div>
+                <div class="search-area">
+                    <input class="search-bar font-italic font-weight-bold"
+                           type="text"
+                           placeholder="New Course Title"
+                           title="Username"/>
+                </div>
+                <div class="add-button-area">
+                    <button class="btn btn-danger add-btn">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
@@ -40,7 +43,7 @@
                 <tr>
                     <th class="large-cell align-middle dark-gray">Title</th>
                     <th class="small-cell align-middle dark-gray">Owned by
-                        <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-caret-down drop-down-arrow"></i>
                     </th>
                     <th class="small-cell align-middle last-modified-size dark-gray">Last modified by me</th>
                     <th class="small-cell align-middle dark-gray" align="center">
@@ -54,19 +57,8 @@
                     <td class="align-middle">
                         <i class="fa  fa-file-text doc-icon"></i>
                         CS5500 Software Engineering Graduate</td>
-                    <td class="align-middle row-light-text">me</td>
-                    <td class="align-middle row-light-text">6:45 PM</td>
-                    <td class="align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="align-middle">
-                        <i class="fa  fa-file-text doc-icon"></i>
-                        CS5500 Software Engineering Graduate</td>
-                    <td class="align-middle row-light-text">me</td>
-                    <td class="align-middle row-light-text">6:45 PM</td>
+                    <td class="d-none d-sm-block align-middle row-light-text">me</td>
+                    <td class="d-none d-sm-block align-middle row-light-text">6:45 PM</td>
                     <td class="align-middle dark-gray">
                         <a class="float-right btn x-button-spacing font-weight-bold">X</a>
                     </td>
@@ -77,7 +69,7 @@
             </tfoot>
         </table>
 
-        <button class="wbdv-bottom-right-10px btn btn-danger">
+        <button class="wbdv-bottom-right-10px btn btn-danger add-btn">
             <i class="fa fa-plus"></i>
         </button>
 
