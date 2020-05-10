@@ -1,3 +1,43 @@
 body {
-    padding-top: 65px;
+    padding-top: 55px;
+    background: #dddddd;
+}
+
+thead {
+    background: #dddddd;
+    height: 50px;
+}
+
+tbody {
+    background: white;
+    height: 60px;
+}
+
+table, th, td {
+    border-bottom: 3px solid #dddddd;
+}
+
+.fa-bars {
+    content: "\f0c9";
+    color: #ffffff;
+}
+
+.large-cell {
+    width: 50%
+}
+
+.small-cell {
+    width: 16.66%
+}
+
+.sort-icon-spacing {
+    padding: 15px;
+}
+
+.last-modified-size {
+    font-size: 0.9rem;
+}
+
+.dark-gray {
+    color: #666666;
 }

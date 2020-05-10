@@ -17,124 +17,60 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar fixed-top navbar-dark bg-dark justify-content-between">
-            <a class="navbar-brand">Navbar</a>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        <nav class="navbar fixed-top navbar-dark bg-primary">
+            <a class="navbar-brand">
+                <i class="fa fa-bars mx-2"></i>
+                Course Manager
+            </a>
+            <div class="form-inline">
+                <div class="form-group">
+                    <input  id="usernameFld"
+                            class="form-control wbdv-field wbdv-username"
+                            type="text"
+                            placeholder="Alice"
+                            title="Username"/>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </div>
         </nav>
-
-        <h1>Course List</h1>
-
-        <table class="table table-striped">
+        <table class="table">
             <thead>
-                <tr class="table-dark">
-                    <th>Title</th>
-                    <th>Owned</th>
-                    <th>Modified</th>
-                    <th>
-                        <i class="fa fa-sort-alpha-asc"></i>
-                        <i class="fa fa-th"></i>
+                <tr>
+                    <th class="large-cell align-middle dark-gray">Title</th>
+                    <th class="small-cell align-middle dark-gray">Owned by
+                        <i class="fa fa-caret-down"></i>
+                    </th>
+                    <th class="small-cell align-middle last-modified-size dark-gray">Last modified by me</th>
+                    <th class="small-cell align-middle dark-gray" align="center">
+                        <i class="fa fa-th sort-icon-spacing"></i>
+                        <i class="fa fa-sort-alpha-asc sort-icon-spacing"></i>
                     </th>
                 </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>
-                    <i class="fa  fa-file-text"></i>
-                    CS4550</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td>
-                    <button class="float-right btn btn-danger btn-lg">
-                        <i class="fa fa-trash"></i>
-                    </button></td>
-            </tr>
-            <tr>
-                <td>1800</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr>
-            <tr class="table-success">
-                <td>CS5200</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr>
-            <tr>
-                <td>CS5610</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr>
-            <tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr><tr>
-                <td>CS4500</td>
-                <td>JGA</td>
-                <td>Today</td>
-                <td><button>X</button></td>
-            </tr>
+                <tr>
+                    <td class="align-middle">
+                        <i class="fa  fa-file-text"></i>
+                        CS5500 Software Engineering Graduate</td>
+                    <td class="align-middle">me</td>
+                    <td class="align-middle">6:45 PM</td>
+                    <td class="align-middle dark-gray">
+                        <a class="float-right">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="align-middle">
+                        <i class="fa  fa-file-text"></i>
+                        CS5500 Software Engineering Graduate</td>
+                    <td class="align-middle">me</td>
+                    <td class="align-middle">6:45 PM</td>
+                    <td class="align-middle dark-gray">
+                        <a class="float-right">X</a>
+                    </td>
+                </tr>
             </tbody>
             <tfoot>
 
