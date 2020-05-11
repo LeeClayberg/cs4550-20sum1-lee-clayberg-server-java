@@ -19,107 +19,113 @@
     <div class="container">
         <nav class="navbar fixed-top navbar-dark bg-primary">
             <div class="form-inline row">
-                <div>
-                    <i class="fa fa-bars hamburger"></i>
+                <div class="wbdv-field">
+                    <i class="fa fa-bars hamburger wbdv-hamburger"></i>
                 </div>
-                <div class="d-none d-md-block course-manager-style">
+                <div class="d-none d-md-block course-manager-style wbdv-label wbdv-course-manager">
                     Course Manager
                 </div>
                 <div class="search-area">
-                    <input class="search-bar font-italic font-weight-bold"
+                    <input class="search-bar font-italic font-weight-bold wbdv-field wbdv-new-course"
                            type="text"
                            placeholder="New Course Title"
                            title="Username"/>
                 </div>
                 <div class="add-button-area">
-                    <button class="btn btn-danger add-btn-top">
+                    <button class="btn btn-danger add-btn-top wbdv-button wbdv-add-course">
                         <i class="fa fa-plus "></i>
                     </button>
                 </div>
             </div>
         </nav>
+
         <table class="table">
             <thead>
                 <tr>
-                    <th class="d-sm-table-cell large-cell header-height align-middle dark-gray">Title</th>
-                    <th class="d-none d-md-table-cell small-cell header-height align-middle dark-gray">Owned by
+                    <th class="d-sm-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">Title</th>
+                    <th class="d-none d-md-table-cell small-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
+                        Owned by
                         <i class="fa fa-caret-down drop-down-arrow"></i>
                     </th>
-                    <th class="d-none d-md-table-cell small-cell header-height align-middle last-modified-size dark-gray">
+                    <th class="d-none d-md-table-cell small-cell header-height align-middle last-modified-size dark-gray wbdv-header wbdv-last-modified">
                         Last modified by me
                     </th>
                     <th class="small-cell header-height align-middle dark-gray" align="center">
                         <div class="d-none d-md-block">
-                            <i class="fa fa-th icon-spacing-15"></i>
-                            <i class="fa fa-sort-alpha-asc icon-spacing-15"></i>
+                            <a class="wbdv-button wbdv-grid-layout">
+                                <i class="fa fa-th header-icon"></i>
+                            </a>
+                            <a class="wbdv-button wbdv-list-layout">
+                                <i class="fa fa-th-list header-icon"></i>
+                            </a>
+                            <a class="wbdv-header wbdv-sort">
+                                <i class="fa fa-sort-alpha-asc header-icon"></i>
+                            </a>
                         </div>
                     </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         CS5500 Software Engineering Graduate
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45 PM</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         CS4550 Software Engineering Undergraduate
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45 PM</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         CS4500 WebDev Undergraduate
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45 PM</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         CS5610 WebDev Graduate
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45 PM</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         CS5200 Intro to Databases
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:44 PM</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:44 PM</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-
-            </tfoot>
         </table>
 
         <table class="table">
@@ -129,22 +135,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         WEBDEV 2 - React
                         <i class="fa fa-users shared-icon"></i>
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">May 4, 2018</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">May 4, 2018</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-
-            </tfoot>
         </table>
 
         <table class="table">
@@ -154,35 +157,32 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         WEBDEV Syllabus
                         <i class="fa fa-users shared-icon"></i>
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">May 3, 2018</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">May 3, 2018</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="large-cell align-middle text-truncate">
-                        <i class="fa fa-file-text doc-icon"></i>
+                <tr class="wbdv-row wbdv-course">
+                    <td class="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                        <i class="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
                         WEBDEV 1 - JavaScript, Java, SQL
                         <i class="fa fa-users shared-icon"></i>
                     </td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
-                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">May 3, 2018</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">May 3, 2018</td>
                     <td class="small-cell align-middle dark-gray">
-                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                        <a class="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                     </td>
                 </tr>
             </tbody>
-            <tfoot>
-
-            </tfoot>
         </table>
 
         <button class="wbdv-bottom-right-10px btn btn-danger">

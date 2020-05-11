@@ -44,9 +44,9 @@ tbody {
     height: 4rem;
 }
 
-.icon-spacing-15 {
-    padding-left: 15px;
-    padding-right: 15px;
+.header-icon {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .last-modified-size {
