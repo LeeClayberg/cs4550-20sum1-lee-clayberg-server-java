@@ -13,7 +13,7 @@ tbody {
     border-left: 3px solid #cecece;
 }
 
-table, tr {
+.table, tr {
     border-bottom: 3px solid #cecece;
 }
 
@@ -31,6 +31,12 @@ table, tr {
 .large-cell {
     width: 50%;
     height: 4rem;
+    max-width: 400px;
+}
+
+.large-header-changed {
+    vertical-align: bottom;
+    content: "Today";
 }
 
 .small-cell {
@@ -69,7 +75,7 @@ table, tr {
 }
 
 .hamburger {
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 15px;
 }
 
