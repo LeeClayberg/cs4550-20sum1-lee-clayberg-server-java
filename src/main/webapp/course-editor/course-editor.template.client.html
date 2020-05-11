@@ -25,9 +25,12 @@
                 <div class="module-top font-weight-bold">
                     <div class="row">
                         <div class="col-2">
-                            <i class="fa fa-times module-top-x"></i>
+                            <a class="wbdv-course-editor wbdv-close"
+                               href="../course-list/course-list.template.client.html">
+                                <i class="fa fa-times module-top-x"></i>
+                            </a>
                         </div>
-                        <div class="col-8 text-truncate">
+                        <div class="col-8 text-truncate wbdv-course-title">
                             CS5610 - WebDev
                         </div>
                         <div class="col-1 d-md-none">
@@ -36,61 +39,75 @@
                     </div>
                 </div>
                 <div class="d-none d-md-block module-list">
-                    <ul class="list-group">
-                        <li class="list-group-item align-middle">
-                            Module 1 - jQuery
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                    <ul class="list-group wbdv-module-list">
+                        <li class="list-group-item align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 1 - jQuery
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
-                        <li class="list-group-item active align-middle">
-                            Module 2 - React
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                        <li class="list-group-item active align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 2 - React
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
-                        <li class="list-group-item align-middle">
-                            Module 3 - Redux
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                        <li class="list-group-item align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 3 - Redux
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
-                        <li class="list-group-item align-middle">
-                            Module 4 - Native
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                        <li class="list-group-item align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 4 - Native
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
-                        <li class="list-group-item align-middle">
-                            Module 5 - Angular
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                        <li class="list-group-item align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 5 - Angular
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
-                        <li class="list-group-item align-middle">
-                            Module 6 - Node
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                        <li class="list-group-item align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 6 - Node
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
-                        <li class="list-group-item align-middle">
-                            Module 7 - Mongo
-                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold ">X</a>
+                        <li class="list-group-item align-middle wbdv-module-item">
+                            <a class="wbdv-module-item-title">
+                                Module 7 - Mongo
+                            </a>
+                            <a class="d-none d-lg-block float-right btn x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                         </li>
                     </ul>
                     <div class="align-middle" align="right">
-                        <i class="fa fa-plus fa-lg bottom-plus"></i>
+                        <i class="fa fa-plus fa-lg bottom-plus wbdv-module-item-add-btn"></i>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 no-padding">
-                <div class="lesson-top">
-                    <ul class="nav nav-pills nav-fill">
+                <div class="lesson-top ">
+                    <ul class="nav nav-pills nav-fill wbdv-lesson-tabs">
                         <a class="nav-item nav-link">Build</a>
                         <a class="nav-item nav-link active">Pages</a>
                         <a class="nav-item nav-link">Theme</a>
                         <a class="nav-item nav-link">Store</a>
                         <a class="nav-item nav-link">Apps</a>
                         <a class="nav-item nav-link">Settings</a>
-                        <i class="fa fa-plus fa-lg top-plus"></i>
+                        <i class="fa fa-plus fa-lg top-plus wbdv-lesson-add-btn"></i>
                     </ul>
                 </div>
                 <div class="topics">
-                    <ul class="nav nav-pills nav-fill">
-                        <a class="nav-item topic-link">Topic 1</a>
-                        <a class="nav-item topic-link active">Topic 2</a>
-                        <a class="nav-item topic-link">Topic 3</a>
-                        <a class="nav-item topic-link">Topic 4</a>
+                    <ul class="nav nav-pills nav-fill wbdv-topic-pill-list">
+                        <a class="nav-item topic-link wbdv-topic-pill">Topic 1</a>
+                        <a class="nav-item topic-link active wbdv-topic-pill">Topic 2</a>
+                        <a class="nav-item topic-link wbdv-topic-pill">Topic 3</a>
+                        <a class="nav-item topic-link wbdv-topic-pill">Topic 4</a>
                         <a class="topic-plus align-middle" align="center">
-                            <i class="fa fa-plus fa-sm"></i>
+                            <i class="fa fa-plus fa-sm wbdv-topic-add-btn"></i>
                         </a>
                     </ul>
                 </div>
