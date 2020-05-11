@@ -5,16 +5,17 @@ body {
 
 thead {
     background: #dddddd;
+    border-bottom: 3px solid #cecece;
 }
 
 tbody {
     background: white;
-    border-right: 3px solid #cecece;
-    border-left: 3px solid #cecece;
+    border-right: 2px solid #cecece;
+    border-left: 2px solid #cecece;
 }
 
 .table, tr {
-    border-bottom: 3px solid #cecece;
+    border-bottom: 2px solid #cecece;
 }
 
 .table td, .table th {
@@ -30,17 +31,16 @@ tbody {
 
 .large-cell {
     width: 50%;
-    height: 4rem;
+    height: 3rem;
     max-width: 400px;
-}
-
-.large-header-changed {
-    vertical-align: bottom;
-    content: "Today";
 }
 
 .small-cell {
     width: 16.66%;
+    height: 3rem;
+}
+
+.header-height {
     height: 4rem;
 }
 
@@ -58,9 +58,19 @@ tbody {
 }
 
 .doc-icon {
-    padding-left: 1rem;
-    padding-right: 1.5rem;
+    padding-left: .75rem;
+    padding-right: 1.25rem;
     color: #007bff;
+}
+
+.smaller-header {
+    font-size: 0.9rem;
+}
+
+.shared-icon {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #aaaaaa;
 }
 
 .x-button-spacing {
@@ -116,7 +126,7 @@ tbody {
     padding-left: 1rem;
 }
 
-.add-btn {
+.add-btn-top {
     background-color: red;
     border-radius: 1.5rem;
 }

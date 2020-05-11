@@ -32,8 +32,8 @@
                            title="Username"/>
                 </div>
                 <div class="add-button-area">
-                    <button class="btn btn-danger add-btn">
-                        <i class="fa fa-plus"></i>
+                    <button class="btn btn-danger add-btn-top">
+                        <i class="fa fa-plus "></i>
                     </button>
                 </div>
             </div>
@@ -41,14 +41,18 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th class="d-sm-table-cell large-cell align-middle dark-gray">Title</th>
-                    <th class="d-none d-md-table-cell small-cell align-middle dark-gray">Owned by
+                    <th class="d-sm-table-cell large-cell header-height align-middle dark-gray">Title</th>
+                    <th class="d-none d-md-table-cell small-cell header-height align-middle dark-gray">Owned by
                         <i class="fa fa-caret-down drop-down-arrow"></i>
                     </th>
-                    <th class="d-none d-md-table-cell small-cell align-middle last-modified-size dark-gray">Last modified by me</th>
-                    <th class="small-cell align-middle dark-gray" align="center">
-                        <i class="d-none d-md-block fa fa-th icon-spacing-15"></i>
-                        <i class="d-none d-md-block fa fa-sort-alpha-asc icon-spacing-15"></i>
+                    <th class="d-none d-md-table-cell small-cell header-height align-middle last-modified-size dark-gray">
+                        Last modified by me
+                    </th>
+                    <th class="small-cell header-height align-middle dark-gray" align="center">
+                        <div class="d-none d-md-block">
+                            <i class="fa fa-th icon-spacing-15"></i>
+                            <i class="fa fa-sort-alpha-asc icon-spacing-15"></i>
+                        </div>
                     </th>
                 </tr>
             </thead>
@@ -64,14 +68,125 @@
                         <a class="float-right btn x-button-spacing font-weight-bold">X</a>
                     </td>
                 </tr>
+
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        CS4550 Software Engineering Undergraduate
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        CS4500 WebDev Undergraduate
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        CS5610 WebDev Graduate
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:45 PM</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        CS5200 Intro to Databases
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">6:44 PM</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
             </tbody>
             <tfoot>
 
             </tfoot>
         </table>
 
-        <button class="wbdv-bottom-right-10px btn btn-danger add-btn">
-            <i class="fa fa-plus"></i>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="d-sm-table-cell large-cell align-bottom dark-gray smaller-header">Yesterday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        WEBDEV 2 - React
+                        <i class="fa fa-users shared-icon"></i>
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">May 4, 2018</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="d-sm-table-cell large-cell align-bottom dark-gray smaller-header">Previous 7 days</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        WEBDEV Syllabus
+                        <i class="fa fa-users shared-icon"></i>
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">May 3, 2018</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="large-cell align-middle text-truncate">
+                        <i class="fa fa-file-text doc-icon"></i>
+                        WEBDEV 1 - JavaScript, Java, SQL
+                        <i class="fa fa-users shared-icon"></i>
+                    </td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">me</td>
+                    <td class="d-none d-md-table-cell small-cell align-middle row-light-text">May 3, 2018</td>
+                    <td class="small-cell align-middle dark-gray">
+                        <a class="float-right btn x-button-spacing font-weight-bold">X</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+
+        <button class="wbdv-bottom-right-10px btn btn-danger">
+            <i class="fa fa-plus fa-lg"></i>
         </button>
 
     </div>

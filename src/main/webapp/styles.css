@@ -11,6 +11,10 @@ h2 {
 
 .wbdv-bottom-right-10px {
     position: fixed;
+    width: 60px;
+    height: 60px;
     bottom: 20px;
     right: 20px;
+    border-radius: 30px;
+    background-color: red;
 }
