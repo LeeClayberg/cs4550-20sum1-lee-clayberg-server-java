@@ -1,4 +1,3 @@
-
 .list-group-item {
     background-color: #454B4F;
     color: #cecece;
@@ -68,9 +67,17 @@
     margin-right: 20px;
 }
 
+.module-top-hamburger {
+    color: #cecece;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .module-list {
     background-color: #373C3F;
     padding: 20px 20px;
+    height: 100%;
 }
 
 .x-button {
@@ -100,5 +107,9 @@
 
 .no-padding {
     padding: 0px;
+}
+
+.collapsed-lesson {
+    color: #cecece;
 }
 
