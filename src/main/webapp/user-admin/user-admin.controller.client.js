@@ -116,7 +116,7 @@
 
   function main() {
     $tbody = $('tbody')
-    $addBtn = $('.wbdv-add-btn')
+    $addBtn = $('.wbdv-create')
     $addBtn.css('backgroundColor', 'yellow')
 
     $addBtn.click(createUser)
