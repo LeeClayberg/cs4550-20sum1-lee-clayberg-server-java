@@ -64,7 +64,7 @@
   function renderAllUsers() {
     // console.log('rendering all users')
     // console.log(users)
-    const template = $('.wbdv-user-row-template')[0]
+    const template = $('.wbdv-template')[0]
     const $template = $(template)
     const clone = $template.clone()
     // console.log($template)
@@ -78,7 +78,7 @@
       copy.find('.wbdv-first-name').html(user.first)
       copy.find('.wbdv-last-name').html(user.last)
       copy.find('.wbdv-role').html(user.role)
-      copy.find('.wbdv-delete')
+      copy.find('.wbdv-remove')
         .attr('id', user._id)
         .click(deleteUser)
       copy.find('.wbdv-edit')
