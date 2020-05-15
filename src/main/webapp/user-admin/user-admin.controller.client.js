@@ -1,13 +1,55 @@
 (function () {
-  let users = [
-    {username: 'alice', password: 'alice', first: 'Alice', last: 'Wonderland', role: 'FACULTY'},
-    {username: 'bob', password: 'bob', first: 'Bob', last: 'Marley', role: 'FACULTY'},
-    {username: 'charlie', password: 'charlie', first: 'Charlie', last: 'Garcia', role: 'STUDENT'}
-  ]
   let $tbody, $addBtn, $updateBtn
   let $usernameFld, $passwordFld, $firstFld, $lastFld, $roleFld
   let service = new AdminUserServiceClient()
   let selectedUser = {}
+
+  function main() {
+    $tbody = $('tbody')
+    $addBtn = $('.wbdv-create')
+
+    //possibly add search
+    $addBtn.click(createUser)
+    $updateBtn.click(updateUser)
+
+    $usernameFld = $('.wbdv-username-fld')
+    $passwordFld = $('.wbdv-password-fld')
+    $firstFld = $('.wbdv-first-fld')
+    $lastFld = $('.wbdv-last-fld')
+    $roleFld = $('.wbdv-role-fld')
+
+    findAllUsers()
+  }
+
+  function createUser() {
+    const username = $usernameFld.val()
+    const first = $firstFld.val()
+    const last = $lastFld.val()
+
+    const newUser = {
+      username: username,
+      first: first,
+      last: last
+    }
+
+    service.createUser(newUser)
+        .then(function (actualUser) {
+          users.push(actualUser)
+          renderAllUsers()
+        })
+  }
+
+  function findAllUsers() {
+    service.findAllUsers()
+        .then(function (allUsers) {
+          let users = allUsers
+          renderAllUsers(users)
+        })
+  }
+
+  function findUserByID() {
+
+  }
 
   function deleteUser(event) {
     console.log(event)
@@ -24,13 +66,17 @@
       })
   }
 
-  function renderUser(user) {
-    selectedUser = user
-    $usernameFld.val(user.username)
-    $firstFld.val(user.first)
-    $lastFld.val(user.last)
+  function selectUser(event) {
+    const target = event.currentTarget
+    const $button = $(target)
+    const userId = $button.attr('id')
+    service.findUserById(userId)
+        .then(function (user) {
+          console.log(user)
+          renderUser(user)
+        })
   }
-  
+
   function updateUser() {
     const updatedUser = {
       _id: selectedUser._id,
@@ -39,29 +85,25 @@
       last: $lastFld.val()
     }
     service.updateUser(selectedUser._id, updatedUser)
-      .then(function(status) {
-        users = users.map(function(user) {
-          if(user._id === selectedUser._id) {
-            return updatedUser
-          } else {
-            return user
-          }
+        .then(function(status) {
+          users = users.map(function(user) {
+            if(user._id === selectedUser._id) {
+              return updatedUser
+            } else {
+              return user
+            }
+          })
         })
-      })
   }
 
-  function selectUser(event) {
-    const target = event.currentTarget
-    const $button = $(target)
-    const userId = $button.attr('id')
-    service.findUserById(userId)
-      .then(function (user) {
-        console.log(user)
-        renderUser(user)
-      })
+  function renderUser(user) {
+    selectedUser = user
+    $usernameFld.val(user.username)
+    $firstFld.val(user.first)
+    $lastFld.val(user.last)
   }
 
-  function renderAllUsers() {
+  function renderUsers(users) {
     // console.log('rendering all users')
     // console.log(users)
     const template = $('.wbdv-template')[0]
@@ -87,72 +129,7 @@
       $tbody.append(copy)
     }
   }
-  
-  function createUser() {
-    const username = $usernameFld.val()
-    const first = $firstFld.val()
-    const last = $lastFld.val()
 
-    const newUser = {
-      username: username,
-      first: first,
-      last: last
-    }
-
-    service.createUser(newUser)
-      .then(function (actualUser) {
-        users.push(actualUser)
-        renderAllUsers()
-      })
-  }
-  
-  function findAllUsers() {
-    service.findAllUsers()
-      .then(function (allUsers) {
-        users = allUsers
-        renderAllUsers()
-      })
-  }
-
-  function main() {
-    $tbody = $('tbody')
-    $addBtn = $('.wbdv-create')
-    $addBtn.css('backgroundColor', 'yellow')
-
-    $addBtn.click(createUser)
-    $updateBtn.click(updateUser)
-
-    $usernameFld = $('.wbdv-username-fld')
-    $passwordFld = $('.wbdv-password-fld')
-    $firstFld = $('.wbdv-first-fld')
-    $lastFld = $('.wbdv-last-fld')
-    $roleFld = $('.wbdv-role-fld')
-
-    findAllUsers()
-    
-    // fetch all  H1s elements from HTML document
-    const h1 = jQuery('h1')
-    h1.css('color', 'red')
-
-    const tr = jQuery('tr')
-    tr.css('backgroundColor', 'blue')
-      .css('color', 'white')
-
-    const h2 = jQuery('<h2>Hello from jQuery</h2>')
-    const body = jQuery('body')
-    body.append(h2)
-
-    const newTr = $('<tr><td>dan</td></tr>')
-    $tbody.append(newTr)
-
-    for(let i=0; i<users.length; i++) {
-      const username = users[i].username
-      const newUserRow = $('<tr><td>'+username+'</td></tr>')
-      $tbody.append(newUserRow)
-    }
-
-    // renderAllUsers()
-  }
 
   jQuery(main)
 

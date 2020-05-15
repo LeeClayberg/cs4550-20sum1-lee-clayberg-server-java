@@ -4,8 +4,8 @@ function AdminUserServiceClient() {
   this.findUserById = findUserById;
   this.deleteUser = deleteUser;
   this.updateUser = updateUser;
-  // replace jannunzi with your own unique identifier ... do not use jannunzi
-  this.url = 'https://wbdv-generic-server.herokuapp.com/api/jannunzi/users';
+
+  this.url = 'https://wbdv-generic-server.herokuapp.com/api/001458299/users';
   var self = this;
   function createUser(user) {
     console.log('creating user')
