@@ -29,6 +29,7 @@ function AdminUserServiceClient() {
         return response.json()
     })
   }
+
   function findUserById(userId) {
     return fetch(self.url + '/' + userId)
       .then(function(response) {

@@ -38,7 +38,7 @@
 
     service.createUser(newUser)
         .then(function () {
-          renderAllUsers()
+          findAllUsers()
         })
   }
 
@@ -46,7 +46,7 @@
     service.findAllUsers()
         .then(function (allUsers) {
           let users = allUsers
-          renderAllUsers(users)
+          renderUsers(users)
         })
   }
 
