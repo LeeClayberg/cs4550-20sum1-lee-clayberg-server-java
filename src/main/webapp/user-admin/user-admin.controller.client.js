@@ -108,18 +108,14 @@
   }
 
   function renderUsers(users) {
-    // console.log('rendering all users')
-    // console.log(users)
     const template = $('.wbdv-template')[0]
     const $template = $(template)
     const clone = $template.clone()
-    // console.log($template)
     $tbody.empty()
+
     for(let i=0; i<users.length; i++) {
       const user = users[i]
-      // console.log(user)
       const copy = clone.clone()
-      // copy.removeClass('wbdv-user-row-template')
       copy.find('.wbdv-username').html(user.username)
       copy.find('.wbdv-first-name').html(user.first)
       copy.find('.wbdv-last-name').html(user.last)
