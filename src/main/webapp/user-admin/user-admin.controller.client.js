@@ -109,6 +109,7 @@
       const user = users[i]
       const copy = clone.clone()
       copy.find('.wbdv-username').html(user.username)
+      copy.find('.wbdv-password').html(user.password)
       copy.find('.wbdv-first-name').html(user.first)
       copy.find('.wbdv-last-name').html(user.last)
       copy.find('.wbdv-role').html(user.role)
