@@ -36,6 +36,7 @@ function AdminUserServiceClient() {
         return response.json()
       })
   }
+
   function updateUser(userId, user) {
     return fetch(self.url + '/' + userId, {
       method: 'PUT',

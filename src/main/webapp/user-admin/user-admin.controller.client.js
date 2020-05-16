@@ -50,8 +50,11 @@
         })
   }
 
-  function findUserByID() {
-
+  function findUserByID(userId) {
+    service.findUserById(userId)
+        .then(function (user) {
+          renderUser(user)
+        })
   }
 
   function deleteUser(event) {
@@ -73,11 +76,7 @@
     const target = event.currentTarget
     const $button = $(target)
     const userId = $button.attr('id')
-    service.findUserById(userId)
-        .then(function (user) {
-          console.log(user)
-          renderUser(user)
-        })
+    findUserByID(userId)
   }
 
   function updateUser() {
