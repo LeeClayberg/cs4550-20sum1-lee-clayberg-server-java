@@ -52,19 +52,19 @@
     service.findAllUsers()
         .then(function (allUsers) {
           let users = allUsers.filter(function(user) {
-            if($usernameFld.val() != '' && $usernameFld.val() != user.username) {
+            if($usernameFld.val() != '' && !user.username.includes($usernameFld.val())) {
               return false;
             }
-            if($passwordFld.val() != '' && $passwordFld.val() != user.password) {
+            if($passwordFld.val() != '' && !user.password.includes($passwordFld.val())) {
               return false;
             }
-            if($firstFld.val() != '' && $firstFld.val() != user.first) {
+            if($firstFld.val() != '' && !user.first.includes($firstFld.val())) {
               return false;
             }
-            if($lastFld.val() != '' && $lastFld.val() != user.last) {
+            if($lastFld.val() != '' && !user.last.includes($lastFld.val())) {
               return false;
             }
-            if($roleFld.val() != user.role) {
+            if(user.role != $roleFld.val()) {
               return false;
             }
             return true;
