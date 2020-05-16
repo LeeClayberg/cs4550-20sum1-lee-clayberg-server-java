@@ -101,8 +101,10 @@
   function renderUser(user) {
     selectedUser = user
     $usernameFld.val(user.username)
+    $passwordFld.val(user.password)
     $firstFld.val(user.first)
     $lastFld.val(user.last)
+    $roleFld.val(user.role)
   }
 
   function renderUsers(users) {
