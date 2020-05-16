@@ -37,7 +37,7 @@
     }
 
     service.createUser(newUser)
-        .then(function () {
+        .then(function (status) {
           findAllUsers()
         })
   }
@@ -62,7 +62,7 @@
     const $button = $(target)
     const userId = $button.attr('id')
     service.deleteUser(userId)
-      .then(function() {
+      .then(function(status) {
         findAllUsers()
       })
   }
@@ -78,18 +78,14 @@
     const updatedUser = {
       _id: selectedUser._id,
       username: $usernameFld.val(),
+      password: $passwordFld.val(),
       first: $firstFld.val(),
-      last: $lastFld.val()
+      last: $lastFld.val(),
+      role: $roleFld.val()
     }
     service.updateUser(selectedUser._id, updatedUser)
         .then(function(status) {
-          users = users.map(function(user) {
-            if(user._id === selectedUser._id) {
-              return updatedUser
-            } else {
-              return user
-            }
-          })
+          findAllUsers()
         })
   }
 
