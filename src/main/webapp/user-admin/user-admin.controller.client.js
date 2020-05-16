@@ -1,6 +1,7 @@
 (function () {
-  let $tbody, $addBtn, $updateBtn
+  let $tbody, $addBtn, $updateBtn, $searchBtn
   let $usernameFld, $passwordFld, $firstFld, $lastFld, $roleFld
+  let $template
   let service = new AdminUserServiceClient()
   let selectedUser = {}
 
@@ -8,10 +9,14 @@
     $tbody = $('tbody')
     $addBtn = $('.wbdv-create')
     $updateBtn = $('.wbdv-update')
+    $searchBtn = $('.wbdv-search')
 
-    //possibly add search
+    const temp = $('.wbdv-template')[0]
+    $template = $(temp)
+
     $addBtn.click(createUser)
     $updateBtn.click(updateUser)
+    $searchBtn.click(searchUser)
 
     $usernameFld = $('.wbdv-username-fld')
     $passwordFld = $('.wbdv-password-fld')
@@ -43,11 +48,35 @@
         })
   }
 
+  function searchUser() {
+    service.findAllUsers()
+        .then(function (allUsers) {
+          let users = allUsers.filter(function(user) {
+            if($usernameFld.val() != '' && $usernameFld.val() != user.username) {
+              return false;
+            }
+            if($passwordFld.val() != '' && $passwordFld.val() != user.password) {
+              return false;
+            }
+            if($firstFld.val() != '' && $firstFld.val() != user.first) {
+              return false;
+            }
+            if($lastFld.val() != '' && $lastFld.val() != user.last) {
+              return false;
+            }
+            if($roleFld.val() != user.role) {
+              return false;
+            }
+            return true;
+          });
+          renderUsers(users)
+        })
+  }
+
   function findAllUsers() {
     service.findAllUsers()
         .then(function (allUsers) {
-          let users = allUsers
-          renderUsers(users)
+          renderUsers(allUsers)
         })
   }
 
@@ -100,8 +129,6 @@
   }
 
   function renderUsers(users) {
-    const template = $('.wbdv-template')[0]
-    const $template = $(template)
     const clone = $template.clone()
     $tbody.empty()
 
