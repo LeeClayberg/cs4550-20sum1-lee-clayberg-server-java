@@ -23,18 +23,21 @@
 
   function createUser() {
     const username = $usernameFld.val()
+    const password = $passwordFld.val()
     const first = $firstFld.val()
     const last = $lastFld.val()
+    const role = $roleFld.val()
 
     const newUser = {
       username: username,
+      password: password,
       first: first,
-      last: last
+      last: last,
+      role: role
     }
 
     service.createUser(newUser)
-        .then(function (actualUser) {
-          users.push(actualUser)
+        .then(function () {
           renderAllUsers()
         })
   }

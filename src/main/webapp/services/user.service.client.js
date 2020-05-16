@@ -7,11 +7,9 @@ function AdminUserServiceClient() {
 
   this.url = 'https://wbdv-generic-server.herokuapp.com/api/001458299/users';
   var self = this;
+
   function createUser(user) {
-    console.log('creating user')
-    console.log(user)
     const userString = JSON.stringify(user)
-    console.log(userString)
 
     return fetch(self.url, {
       method: 'POST',
@@ -23,9 +21,8 @@ function AdminUserServiceClient() {
       .then(function(response) {
         return response.json()
       })
-
-
   }
+
   function findAllUsers() {
     return fetch(self.url)
       .then(function(response) {
