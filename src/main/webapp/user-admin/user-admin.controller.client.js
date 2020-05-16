@@ -58,17 +58,12 @@
   }
 
   function deleteUser(event) {
-    console.log(event)
     const target = event.currentTarget
     const $button = $(target)
     const userId = $button.attr('id')
-    // alert('delete user ' + userId)
     service.deleteUser(userId)
       .then(function() {
-        users = users.filter(function(user) {
-          return user._id !== userId
-        })
-        renderAllUsers()
+        findAllUsers()
       })
   }
 
@@ -129,7 +124,6 @@
       $tbody.append(copy)
     }
   }
-
 
   jQuery(main)
 
