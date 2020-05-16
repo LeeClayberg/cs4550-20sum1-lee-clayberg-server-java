@@ -7,6 +7,7 @@
   function main() {
     $tbody = $('tbody')
     $addBtn = $('.wbdv-create')
+    $updateBtn = $('.wbdv-update')
 
     //possibly add search
     $addBtn.click(createUser)
