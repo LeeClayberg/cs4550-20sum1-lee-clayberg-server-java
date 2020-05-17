@@ -1,4 +1,8 @@
 
+.hidden{
+    display: none;
+}
+
 .table th {
     font-size: max(1.3vw, 11px);
     padding: 1vw;

@@ -28,24 +28,30 @@
   }
 
   function createUser() {
-    const username = $usernameFld.val()
-    const password = $passwordFld.val()
-    const first = $firstFld.val()
-    const last = $lastFld.val()
-    const role = $roleFld.val()
+    if($roleFld.val() != '') {
+      const username = $usernameFld.val()
+      const password = $passwordFld.val()
+      const first = $firstFld.val()
+      const last = $lastFld.val()
+      const role = $roleFld.val()
 
-    const newUser = {
-      username: username,
-      password: password,
-      first: first,
-      last: last,
-      role: role
+      const newUser = {
+        username: username,
+        password: password,
+        first: first,
+        last: last,
+        role: role
+      }
+
+      service.createUser(newUser)
+          .then(function (status) {
+            findAllUsers()
+          })
+
+      document.getElementById('failureAlert').classList.add('hidden');
+    } else {
+      document.getElementById('failureAlert').classList.remove('hidden');
     }
-
-    service.createUser(newUser)
-        .then(function (status) {
-          findAllUsers()
-        })
   }
 
   function searchUser() {
@@ -64,7 +70,7 @@
             if($lastFld.val() != '' && !user.last.includes($lastFld.val())) {
               return false;
             }
-            if(user.role != $roleFld.val()) {
+            if($roleFld.val() != '' && user.role != $roleFld.val()) {
               return false;
             }
             return true;
