@@ -45,6 +45,7 @@
 
       service.createUser(newUser)
           .then(function (status) {
+            clearForm()
             findAllUsers()
           })
 
@@ -121,8 +122,17 @@
     }
     service.updateUser(selectedUser._id, updatedUser)
         .then(function(status) {
+          clearForm()
           findAllUsers()
         })
+  }
+
+  function clearForm() {
+    $usernameFld.val('')
+    $passwordFld.val('')
+    $firstFld.val('')
+    $lastFld.val('')
+    $roleFld.val('')
   }
 
   function renderUser(user) {
