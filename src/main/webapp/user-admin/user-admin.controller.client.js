@@ -112,19 +112,24 @@
   }
 
   function updateUser() {
-    const updatedUser = {
-      _id: selectedUser._id,
-      username: $usernameFld.val(),
-      password: $passwordFld.val(),
-      first: $firstFld.val(),
-      last: $lastFld.val(),
-      role: $roleFld.val()
+    if($roleFld.val() != '') {
+      const updatedUser = {
+        _id: selectedUser._id,
+        username: $usernameFld.val(),
+        password: $passwordFld.val(),
+        first: $firstFld.val(),
+        last: $lastFld.val(),
+        role: $roleFld.val()
+      }
+      service.updateUser(selectedUser._id, updatedUser)
+          .then(function(status) {
+            findAllUsers()
+            clearFields()
+          })
+      document.getElementById('failureAlert').classList.add('hidden');
+    } else {
+      document.getElementById('failureAlert').classList.remove('hidden');
     }
-    service.updateUser(selectedUser._id, updatedUser)
-        .then(function(status) {
-          findAllUsers()
-          clearFields()
-        })
   }
 
   function renderUser(user) {
