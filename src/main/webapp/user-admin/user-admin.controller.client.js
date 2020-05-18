@@ -45,8 +45,8 @@
 
       service.createUser(newUser)
           .then(function (status) {
-            clearForm()
             findAllUsers()
+            clearFields()
           })
 
       document.getElementById('failureAlert').classList.add('hidden');
@@ -122,17 +122,9 @@
     }
     service.updateUser(selectedUser._id, updatedUser)
         .then(function(status) {
-          clearForm()
           findAllUsers()
+          clearFields()
         })
-  }
-
-  function clearForm() {
-    $usernameFld.val('')
-    $passwordFld.val('')
-    $firstFld.val('')
-    $lastFld.val('')
-    $roleFld.val('')
   }
 
   function renderUser(user) {
@@ -142,6 +134,14 @@
     $firstFld.val(user.first)
     $lastFld.val(user.last)
     $roleFld.val(user.role)
+  }
+
+  function clearFields() {
+    $usernameFld.val('')
+    $passwordFld.val('')
+    $firstFld.val('')
+    $lastFld.val('')
+    $roleFld.val('')
   }
 
   function renderUsers(users) {
