@@ -86,7 +86,7 @@
         })
   }
 
-  function findUserByID(userId) {
+  function findUserById(userId) {
     service.findUserById(userId)
         .then(function (user) {
           renderUser(user)
@@ -107,7 +107,7 @@
     const target = event.currentTarget
     const $button = $(target)
     const userId = $button.attr('id')
-    findUserByID(userId)
+    findUserById(userId)
   }
 
   function updateUser() {
