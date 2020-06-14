@@ -2,9 +2,12 @@ package com.example.cs455020su1leeclaybergserverjava.services;
 
 import com.example.cs455020su1leeclaybergserverjava.models.Widget;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class WidgetService {
   List<Widget> widgets = new ArrayList<>();
 
@@ -16,7 +19,13 @@ public class WidgetService {
   }
 
   public List<Widget> findWidgetsForTopic(String tid) {
-    
+    List<Widget> result = new ArrayList<Widget>();
+    for (Widget w: widgets) {
+      if(w.getTopicId().equals(tid)) {
+        result.add(w);
+      }
+    }
+    return result;
   }
 
   public int updateWidget(int wid, Widget widget) {
