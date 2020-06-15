@@ -17,7 +17,7 @@ public class Widget {
 
     public Widget(String name, int id, String topicId, String type, int widgetOrder, String text, String src, int size, int width, int height, String cssClass, String style, String value) {
         this.name = name;
-        this.id = (int)(Math.random() * 1000000);
+        this.id = id;
         this.topicId = topicId;
         this.type = type;
         this.widgetOrder = widgetOrder;
@@ -49,6 +49,7 @@ public class Widget {
 
     public void updateWidget(Widget newWidget) {
         this.name = newWidget.name;
+        this.id = newWidget.id;
         this.type = newWidget.type;
         this.widgetOrder = newWidget.widgetOrder;
         this.text = newWidget.text;
