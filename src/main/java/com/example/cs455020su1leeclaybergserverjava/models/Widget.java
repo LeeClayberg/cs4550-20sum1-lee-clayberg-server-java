@@ -63,7 +63,6 @@ public class Widget {
     }
 
     public Widget() {
-        this.id = (int)(Math.random() * 1000000);
     }
 
     public String getName() {
