@@ -5,8 +5,11 @@ import com.example.cs455020su1leeclaybergserverjava.services.TopicService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,17 +21,17 @@ public class TopicController {
   @Autowired
   TopicService service;
 
-  @GetMapping("/api/lessons/{lessonId}/topics")
+  @PostMapping("/api/lessons/{lessonId}/topics")
   public Topic createTopic(@PathVariable("lessonId") String lessonId, @RequestBody Topic newTopic) {
     return service.createTopic(lessonId, newTopic);
   }
 
-  @GetMapping("/api/topics/{topicId}")
+  @DeleteMapping("/api/topics/{topicId}")
   public int deleteTopic(@PathVariable("topicId") Integer tid) {
     return service.deleteTopic(tid);
   }
 
-  @GetMapping("/api/topics/{topicId}")
+  @PutMapping("/api/topics/{topicId}")
   public int updateTopic(@PathVariable("topicId") Integer tid, @RequestBody Topic updatedTopic) {
     return service.updateTopic(tid, updatedTopic);
   }
