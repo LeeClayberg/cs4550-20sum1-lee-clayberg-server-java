@@ -18,6 +18,6 @@ public interface TopicRepository extends CrudRepository<Topic, Integer> {
           @Param("topicId") Integer tid);
 
   @Query("SELECT topic FROM Topic topic WHERE topic.lesson = :lessonId")
-  List<Topic> findTopicsForLesson(
+  public List<Topic> findTopicsForLesson(
           @Param("lessonId") String lessonId);
 }
