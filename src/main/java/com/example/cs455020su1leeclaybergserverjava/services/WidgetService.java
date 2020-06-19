@@ -1,7 +1,11 @@
 package com.example.cs455020su1leeclaybergserverjava.services;
 
+import com.example.cs455020su1leeclaybergserverjava.models.Topic;
 import com.example.cs455020su1leeclaybergserverjava.models.Widget;
+import com.example.cs455020su1leeclaybergserverjava.repositories.TopicRepository;
+import com.example.cs455020su1leeclaybergserverjava.repositories.WidgetRepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,55 +13,45 @@ import java.util.List;
 
 @Service
 public class WidgetService {
-  List<Widget> widgets = new ArrayList<>();
 
-  public Widget createWidget(String tid, Widget widget) {
-    Widget newWidget = new Widget(widget);
-    newWidget.setTopicId(tid);
-    widgets.add(newWidget);
-    return newWidget;
+  @Autowired
+  TopicRepository topicRepository;
+
+  @Autowired
+  WidgetRepository repository;
+
+  public List<Widget> findWidgetsForTopic(Integer tid) {
+    return repository.findWidgetsForTopic(tid);
   }
 
-  public List<Widget> findWidgetsForTopic(String tid) {
-    List<Widget> result = new ArrayList<Widget>();
-    for (Widget w: widgets) {
-      if(w.getTopicId().equals(tid)) {
-        result.add(w);
-      }
+  public Widget findWidgetById(Integer wid) {
+    return repository.findWidgetById(wid);
+  }
+
+  public List<Widget> findAllWidgets() {
+    return repository.findAllWidgets();
+  }
+
+  public int deleteWidget(Integer wid) {
+    repository.deleteById(wid);
+    if(repository.findWidgetById(wid) != null) {
+      return 0;
     }
-    return result;
+    return 1;
   }
 
-  public int updateWidget(int wid, Widget widget) {
-    for (Widget w: widgets) {
-      if(w.getId() == wid) {
-        w.updateWidget(widget);
-        return 1;
-      }
+  public Widget createWidget(Integer tid, Widget newWidget) {
+    Topic topic = topicRepository.findTopicById(tid);
+    newWidget.setTopic(topic);
+    return repository.save(newWidget);
+  }
+
+  public int updateWidget(Integer widgetId, Widget updatedWidget) {
+    Widget widget = repository.findWidgetById(widgetId);
+    widget.updateWidget(updatedWidget);
+    if(repository.save(widget) == null) {
+      return 0;
     }
-    return 0;
-  }
-
-  public int deleteWidget(int wid) {
-    for (Widget w: widgets) {
-      if(w.getId() == wid) {
-        widgets.remove(w);
-        return 1;
-      }
-    }
-    return 0;
-  }
-
-  public List<Widget> findAllWidgets(){
-    return widgets;
-  }
-
-  public Widget findWidgetById(int wid) {
-    for (Widget w: widgets) {
-      if(w.getId() == wid) {
-        return w;
-      }
-    }
-    return null;
+    return 1;
   }
 }
