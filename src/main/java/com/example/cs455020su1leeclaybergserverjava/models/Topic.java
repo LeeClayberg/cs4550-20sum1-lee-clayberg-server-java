@@ -32,6 +32,13 @@ public class Topic {
   public Topic() {
   }
 
+  public void updateTopic(Topic topic) {
+    this.title = topic.title;
+    this.description = topic.description;
+    this.widgets = topic.widgets;
+    this.lessonId = topic.lessonId;
+  }
+
   public int getId() {
     return id;
   }
