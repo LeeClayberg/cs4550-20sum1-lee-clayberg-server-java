@@ -19,14 +19,14 @@ public class Topic {
   private String description;
   @OneToMany(mappedBy = "topic")
   private List<Widget> widgets;
-  private String lessonId;
+  private String lesson;
 
-  public Topic(int id, String title, String description, List<Widget> widgets, String lessonId) {
+  public Topic(int id, String title, String description, List<Widget> widgets, String lesson) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.widgets = widgets;
-    this.lessonId = lessonId;
+    this.lesson = lesson;
   }
 
   public Topic() {
@@ -36,7 +36,7 @@ public class Topic {
     this.title = topic.title;
     this.description = topic.description;
     this.widgets = topic.widgets;
-    this.lessonId = topic.lessonId;
+    this.lesson = topic.lesson;
   }
 
   public int getId() {
@@ -71,11 +71,11 @@ public class Topic {
     this.widgets = widgets;
   }
 
-  public String getLessonId() {
-    return lessonId;
+  public String getLesson() {
+    return lesson;
   }
 
-  public void setLessonId(String lessonId) {
-    this.lessonId = lessonId;
+  public void setLesson(String lesson) {
+    this.lesson = lesson;
   }
 }

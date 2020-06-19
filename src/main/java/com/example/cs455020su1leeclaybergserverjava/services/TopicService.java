@@ -14,7 +14,7 @@ public class TopicService {
   TopicRepository repository;
 
   public Topic createTopic(String lid, Topic topic) {
-    topic.setLessonId(lid);
+    topic.setLesson(lid);
     return repository.save(topic);
   }
 
