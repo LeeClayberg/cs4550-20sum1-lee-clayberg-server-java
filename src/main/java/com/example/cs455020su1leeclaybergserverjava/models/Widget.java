@@ -1,9 +1,21 @@
 package com.example.cs455020su1leeclaybergserverjava.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String topicId;
+    private String name;
     private String type;
     private int widgetOrder;
     private String text;
@@ -15,10 +27,14 @@ public class Widget {
     private String style;
     private String value;
 
-    public Widget(String name, int id, String topicId, String type, int widgetOrder, String text, String src, int size, int width, int height, String cssClass, String style, String value) {
+    @ManyToOne
+    @JsonIgnore
+    private Topic topic;
+
+    public Widget(String name, int id, Topic topic, String type, int widgetOrder, String text, String src, int size, int width, int height, String cssClass, String style, String value) {
         this.name = name;
         this.id = id;
-        this.topicId = topicId;
+        this.topic = topic;
         this.type = type;
         this.widgetOrder = widgetOrder;
         this.text = text;
@@ -34,7 +50,7 @@ public class Widget {
     public Widget(Widget newWidget) {
         this.name = newWidget.name;
         this.id = newWidget.id;
-        this.topicId = newWidget.topicId;
+        this.topic = newWidget.topic;
         this.type = newWidget.type;
         this.widgetOrder = newWidget.widgetOrder;
         this.text = newWidget.text;
@@ -81,12 +97,12 @@ public class Widget {
         this.id = id;
     }
 
-    public String getTopicId() {
-        return topicId;
+    public Topic getTopic() {
+        return topic;
     }
 
-    public void setTopicId(String topicId) {
-        this.topicId = topicId;
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     public String getType() {
